@@ -4,6 +4,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap CSS -->
     <link
@@ -12,199 +18,74 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"
+      integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="./lib/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="./lib/fullpage.css" />
+    <script>
+      $(function () {
+        var includes = $("[data-include]");
+        console.log(includes.length);
+        jQuery.each(includes, function () {
+          var file = "components/" + $(this).data("include") + ".html";
+          console.log(file);
+          $(this).load(file);
+        });
+      });
+    </script>
     <title>Hello, world!</title>
   </head>
-  <body>
-    <div class="container my-4">
-      <div class="row">
-        <div class="col-md-10 container-fluid">
-          <div class="row">
-            <div class="col-md-3">
-              <h1>Indah Oesadi</h1>
-            </div>
-            <div class="col-md-3">
-              <p>Lead Conversion</p>
-              <p>Ration-> 0:1</p>
-            </div>
-            <div class="col-md-3">
-              <strong>Order</strong>
-              <p>Repeat -> 0</p>
-              <p>New -> 0</p>
-            </div>
-            <div class="col-md-3">
-              <strong>Lead Status</strong>
-              <p>No Progress -> 0</p>
-              <p>Need Follow Up -> 0</p>
-            </div>
+  <body class="bg-gradient">
+    <div id="fullpage">
+      <div class="container-fluid pt-2 section">
+        <div class="row">
+          <div class="col-lg-6">
+            <div data-include="user"></div>
           </div>
-          <!--  -->
-          <div class="row">
-            <div class="col-md-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Lead</h5>
-                  <div class="d-flex justify-content-between">
-                    <h1>00</h1>
-                  </div>
-                  <p class="invisible">IDR 0</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Qualified Lead</h5>
-                  <div class="d-flex justify-content-between">
-                    <h1>00</h1>
-                  </div>
-                  <p>IDR 0</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Proposal</h5>
-                  <div class="d-flex justify-content-between">
-                    <h1>00</h1>
-                  </div>
-                  <p>IDR 0</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Negotiation</h5>
-                  <div class="d-flex justify-content-between">
-                    <h1>00</h1>
-                  </div>
-                  <p>IDR 0</p>
-                </div>
-              </div>
-            </div>
+          <div class="col-lg-6">
+            <div data-include="user"></div>
           </div>
         </div>
-        <div class="col-md-2 card">
-          <h4>Win / MO</h4>
-          <div class="d-flex justify-content-between">
-            <h3>00</h3>
-            <i class="fas fa-accessible-icon"></i>
+        <div class="row">
+          <div class="col-lg-6">
+            <div data-include="user"></div>
           </div>
-          <p>IDR 0</p>
-          <div class="d-flex justify-content-between">
-            <span>Q1</span>
-            <b>00</b>
-            <i>Dealt</i>
-          </div>
-          <div class="d-flex justify-content-between">
-            <span>Q2</span>
-            <b>00</b>
-            <i>Dealt</i>
-          </div>
-          <div class="d-flex justify-content-between">
-            <span>Q3</span>
-            <b>00</b>
-            <i>Dealt</i>
-          </div>
-          <div class="d-flex justify-content-between">
-            <span>Q4</span>
-            <b>00</b>
-            <i>Dealt</i>
+          <div class="col-lg-6">
+            <div data-include="user"></div>
           </div>
         </div>
       </div>
-      <!--  -->
-      <div class="row mt-4">
-        <div class="col-md-11 card p-4">
-          <div class="row">
-            <div class="col-md-1 p-0">
-              <br />
-              <h6>Conversion Rate</h6>
-              <br />
-              <h6>Average Duration</h6>
-            </div>
-            <div class="col-md-11">
-              <div class="row">
-                <div class="col-md-3 text-center">
-                  <div class="d-flex w-100 justify-content-center">
-                    <canvas class="d-1 mx-auto w-50 d-flex"> </canvas>
-                  </div>
-                  <h4>
-                    <p><b>00</b> Days</p>
-                  </h4>
-                  <div class="d-flex justify-content-around">
-                    <div>
-                      <p><b>00</b> Days</p>
-                      <i>Longest</i>
-                    </div>
-                    <div>
-                      <p><b>00</b> Days</p>
-                      <i>Shortest</i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 text-center">
-                  <div class="d-flex w-100 justify-content-center">
-                    <canvas class="d-2 mx-auto w-50 d-flex"> </canvas>
-                  </div>
-                  <h4>
-                    <p><b>00</b> Days</p>
-                  </h4>
-                  <div class="d-flex justify-content-around">
-                    <div>
-                      <p><b>00</b> Days</p>
-                      <i>Longest</i>
-                    </div>
-                    <div>
-                      <p><b>00</b> Days</p>
-                      <i>Shortest</i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 text-center">
-                  <div class="d-flex w-100 justify-content-center">
-                    <canvas class="d-3 mx-auto w-50 d-flex"> </canvas>
-                  </div>
-                  <h4>
-                    <p><b>00</b> Days</p>
-                  </h4>
-                  <div class="d-flex justify-content-around">
-                    <div>
-                      <p><b>00</b> Days</p>
-                      <i>Longest</i>
-                    </div>
-                    <div>
-                      <p><b>00</b> Days</p>
-                      <i>Shortest</i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 text-center">
-                  <div class="d-flex w-100 justify-content-center">
-                    <canvas class="d-4 mx-auto w-50 d-flex"> </canvas>
-                  </div>
-                  <h4>
-                    <p><b>00</b> Days</p>
-                  </h4>
-                  <div class="d-flex justify-content-around">
-                    <div>
-                      <p><b>00</b> Days</p>
-                      <i>Longest</i>
-                    </div>
-                    <div>
-                      <p><b>00</b> Days</p>
-                      <i>Shortest</i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div class="container-fluid pt-2 section">
+        <div class="row">
+          <div class="col-lg-6">
+            <div data-include="user"></div>
+          </div>
+          <div class="col-lg-6">
+            <div data-include="user"></div>
           </div>
         </div>
-        <div class="col-md-1 card text-center">
-          <h6>Target</h6>
+        <div class="row">
+          <div class="col-lg-6">
+            <div data-include="user"></div>
+          </div>
+          <div class="col-lg-6">
+            <div data-include="user"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -231,11 +112,18 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+      integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"
+      integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script>
       const labels = ["January", "February", "March", "April", "May", "June"];
 
@@ -266,10 +154,11 @@
       };
 
       $(document).ready(function () {
-        const myChart = new Chart($(".d-1"), config);
-        const myChart2 = new Chart($(".d-2"), config);
-        const myChart3 = new Chart($(".d-3"), config);
-        const myChart4 = new Chart($(".d-4"), config);
+        // const myChart = new Chart($(".d-1"), config);
+        // const myChart2 = new Chart($(".d-2"), config);
+        // const myChart3 = new Chart($(".d-3"), config);
+        // const myChart4 = new Chart($(".d-4"), config);
+        var myFullpage = new fullpage("#fullpage", {});
       });
     </script>
   </body>

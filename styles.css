@@ -1,0 +1,33 @@
+* {
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-family: "Outfit", sans-serif;
+}
+
+.bg-gradient {
+  background: rgba(9, 46, 148, 0.747);
+  min-height: 100vh;
+}
+
+.bg-grid {
+  background: rgba(72, 88, 122, 0.308);
+  border: none;
+}
+
+.bg-grid-dark {
+  background: rgba(72, 88, 122, 0.945);
+  border: none;
+}
+
+.bg-grid h5 {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.icon-wrap {
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.836);
+  color: #2ecc71;
+  font-size: 2rem;
+  border-radius: 5px;
+}
