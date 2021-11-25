@@ -52,13 +52,24 @@
   </head>
   <body class="bg-gradient">
     <div id="fullpage">
-      <div class="container-fluid pt-2 section">
+      <div class="container-fluid section">
+        <div class="d-flex justify-content-between px-4 pt2">
+          <div>
+            <h2>ADS SALES REPORTING</h2>
+            <h3>Cutoff W2 Nov 2021</h3>
+          </div>
+          <div class="text-end">
+            <h2>MEDIAHUB TEAM</h2>
+            <h3>MARKETING BUSINESS ACCELERATION</h3>
+          </div>
+        </div>
+        <hr />
         <div class="row">
           <div class="col-lg-6">
             <div data-include="user"></div>
           </div>
           <div class="col-lg-6">
-            <div data-include="user"></div>
+            <div data-include="user-down"></div>
           </div>
         </div>
         <div class="row">
@@ -66,11 +77,22 @@
             <div data-include="user"></div>
           </div>
           <div class="col-lg-6">
-            <div data-include="user"></div>
+            <div data-include="user-down"></div>
           </div>
         </div>
       </div>
       <div class="container-fluid pt-2 section">
+        <div class="d-flex justify-content-between px-4 pt2">
+          <div>
+            <h2>ADS SALES REPORTING</h2>
+            <h3>Cutoff W2 Nov 2021</h3>
+          </div>
+          <div class="text-end">
+            <h2>MEDIAHUB TEAM</h2>
+            <h3>MARKETING BUSINESS ACCELERATION</h3>
+          </div>
+        </div>
+        <hr />
         <div class="row">
           <div class="col-lg-6">
             <div data-include="user"></div>
@@ -124,6 +146,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="lib/gauge.js"></script>
     <script>
       const labels = ["January", "February", "March", "April", "May", "June"];
 
@@ -159,6 +182,17 @@
         // const myChart3 = new Chart($(".d-3"), config);
         // const myChart4 = new Chart($(".d-4"), config);
         var myFullpage = new fullpage("#fullpage", {});
+        setTimeout(() => {
+          let gauges3 = $(".gauge3").toArray();
+          console.log("LENG", gauges3.length);
+          gauges3.forEach((e) => {
+            console.log(e);
+            var gauge3 = Gauge(e, {
+              max: 100,
+              value: 50,
+            });
+          });
+        }, 100);
       });
     </script>
   </body>

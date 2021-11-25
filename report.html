@@ -52,7 +52,7 @@
   </head>
   <body class="bg-gradient">
     <div id="fullpage">
-      <div class="container-fluid">
+      <div class="container-fluid pt-4">
         <div class="row">
           <div class="col-md-5">
             <div data-include="report-user"></div>
@@ -148,7 +148,7 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="card bg-grid text-center p-3">
-                    <canvas class="chart-meter"> </canvas>
+                    <div class="gauge-container three gauge3"></div>
                     <div class="bg-success">
                       <h6 class="fw-bold my-1">Lead-to-Q.Lead Rate</h6>
                     </div>
@@ -156,7 +156,7 @@
                 </div>
                 <div class="col-md-4">
                   <div class="card bg-grid text-center p-3">
-                    <canvas class="chart-meter"> </canvas>
+                    <div class="gauge-container three gauge3"></div>
                     <div class="bg-success">
                       <h6 class="fw-bold my-1">Lead-to-Prop Rate</h6>
                     </div>
@@ -164,7 +164,7 @@
                 </div>
                 <div class="col-md-4">
                   <div class="card bg-grid text-center p-3">
-                    <canvas class="chart-meter"> </canvas>
+                    <div class="gauge-container three gauge3"></div>
                     <div class="bg-success">
                       <h6 class="fw-bold my-1">Lead-to-Win Rate</h6>
                     </div>
@@ -174,8 +174,29 @@
             </div>
             <div class="container-fluid mt-4">
               <h5>Sales Progress</h5>
-              <div class="card bg-grid-dark p-4">
+              <div class=" bg-grid p-4 rounded-3">
+                <div class="text-end">
+                  <h2><b>IDR</b> 28.321 B</h2>
+                  <p>Target Ads Sales 2021</a>
+                </div>
                 <canvas id="linechart"></canvas>
+              </div>
+            </div>
+            <div class="container-fluid mt-4">
+              <h5>Achievement YTD</h5>
+              <div class="card bg-grid p-4">
+                <div class="progress" style="height: 20px">
+                  <div
+                    class="progress-bar progress-achievement"
+                    role="progressbar"
+                    style="width: 25%"
+                    aria-valuenow="25"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <b>25%</b>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -217,24 +238,36 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="lib/gauge.js"></script>
     <script>
-      const labels = ["January", "February", "March", "April"];
+      const labels = [
+        "1 Nov",
+        "1 Nov",
+        "1 Nov",
+        "1 Nov",
+        "1 Nov",
+        "1 Nov",
+        "1 Nov",
+        "1 Nov",
+        "1 Nov",
+        "1 Nov",
+      ];
       const data = {
         labels: labels,
         datasets: [
           {
-            data: [65, 59, 80, 81, 56, 55, 40],
-            fill: false,
-            borderColor: "#2ecc71",
+            data: [0, 5, 90, 25, 77, 40, 25, 20, 21, 23, 30],
+            borderColor: "#ffffff",
             tension: 0.1,
             borderWidth: 1,
+            pointRadius: 0,
           },
           {
-            data: [20, 17, 33, 19, 8, 10, 25],
-            fill: false,
-            borderColor: "#c0392b",
+            data: [20, 17, 33, 19, 8, 10, 25, 20, 17, 33, 19],
+            borderColor: "#ff6b81",
             tension: 0.1,
-            borderWidth: 1,
+            borderWidth: 2,
+            pointRadius: 0,
           },
         ],
       };
@@ -251,22 +284,23 @@
           scales: {
             x: {
               grid: {
-                color: "#2c3e50",
+                display: false,
               },
               ticks: {
-                color: "#2c3e50", // not 'fontColor:' anymore
+                color: "#dbdbdb", // not 'fontColor:' anymore
                 stepSize: 1,
                 beginAtZero: true,
               },
             },
             y: {
               grid: {
-                color: "#2c3e50",
+                color: "#57606f",
               },
               ticks: {
-                color: "#2c3e50", // not 'fontColor:' anymore
+                color: "#dbdbdb", // not 'fontColor:' anymore
                 stepSize: 1,
                 beginAtZero: true,
+                max: 100,
               },
             },
           },
@@ -279,6 +313,13 @@
         // const myChart3 = new Chart($(".d-3"), config);
         // const myChart4 = new Chart($(".d-4"), config);
         // var myFullpage = new fullpage("#fullpage", {});
+        let gauges3 = $(".gauge3").toArray();
+        gauges3.forEach((e) => {
+          var gauge3 = Gauge(e, {
+            max: 100,
+            value: 50,
+          });
+        });
       });
     </script>
   </body>
