@@ -5,8 +5,10 @@
 }
 
 .bg-gradient {
-  background: rgba(9, 46, 148, 0.747);
+  background: linear-gradient(45deg, #28fb87, #8063ff, #4424d4d8) !important;
   min-height: 100vh;
+  background-size: 400% 400%;
+  position: relative;
 }
 
 .bg-grid {
